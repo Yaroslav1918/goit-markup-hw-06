@@ -17,7 +17,7 @@
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --back-img-text: rgba(47, 48, 58, 0.8);
   --back-overlay: rgba(33, 150, 243, 0.9);
-  --color-close-button: rgba(0, 0, 0, 0,1);
+  --color-close-button:rgba(0, 0, 0, 0.1);
   --color-border-input: rgba(255, 255, 255, 0.3);
   --drop-shadow-input: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   --border-modal-input: rgba(33, 33, 33, 0.2);
@@ -310,10 +310,8 @@ letter-spacing: 0.03em;
 position: absolute;
 right: 0%;
 bottom: 0%;
+display: block;
 width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
 padding: 27px 82px 27px 81px;
 font-weight: bold;
 font-size: 14px;
@@ -350,6 +348,9 @@ text-align: center;
 .social-list {
   display: flex;
   justify-content: center;
+}
+.social-list li:not(:last-child) {
+    margin-right: 10px;
 }
 
 .social-link {
@@ -432,6 +433,7 @@ border: 1px solid var(--accent-color);
 .footer-container {
   display: flex;
   align-items: baseline;
+  justify-content: flex-end;
 }
 
 
@@ -606,6 +608,7 @@ color: var(--secondary-color);
 width: 358px;
 height: 50px;
 margin-right: 12px;
+color: var(--address-color);
 background-color: var(--black-color);
 border: 1px solid var(--color-border-input);
 filter: var(--drop-shadow-input);
@@ -613,7 +616,6 @@ border-radius: 4px;
 padding: 15px;
 }
 .input-email::placeholder {
-  
 font-size: 16px;
 line-height: 1.25;
 color: var(--address-color);
@@ -709,10 +711,14 @@ margin-bottom: 12px;
 .form-modal {
   display: block;
   padding: 40px 39px 40px 41px;
+  text-align: center;
 
 }
 .label-modal {
+position: relative;
+display: block;
 width: 100%;
+margin-bottom: 10px;
 font-size: 12px;
 line-height: 1.16;
 letter-spacing: 0.01em;
@@ -721,7 +727,7 @@ transition: fill var(--duration) var(--cubic-bezier);
 }
 
 .label-span {
-  display: inline-block;
+  display: flex;
   margin-bottom: 4px;
 }
 .input-modal {
@@ -753,7 +759,6 @@ border-radius: 4px;
 transition: border var(--duration) var(--cubic-bezier);
 }
 .form-box {
-  position: relative;
   margin-bottom: 10px;
 }
 
@@ -793,6 +798,7 @@ border var(--duration) var(--cubic-bezier);
 .checkbox:focus +.span-icon,
 .checkbox:hover +.span-icon {
   border: 2px solid var(--accent-color);
+  cursor: pointer;
 }
 .checkbox:checked +.span-icon {
   background-color: var(--accent-color);

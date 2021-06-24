@@ -418,32 +418,27 @@
         </button>
         <form class="form-modal">
           <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
-          <div class="form-box">
           <label class="label-modal">
     <span class="label-span"> Имя</span>
-    <svg class="icon-label" width="18" height="18">
+    <input type="text" name="user-name" class="input-modal" />
+      <svg class="icon-label" width="18" height="18">
          <use href="./images/icons.svg#icon-person-black-18dp-1"></use> 
         </svg>
-    <input type="text" name="user-name" class="input-modal" />
-   </div>
   </label>
-  <div class="form-box">
    <label class="label-modal">
      <span class="label-span">Телефон</span>
-     <svg class="icon-label" width="18" height="18">
+     
+    <input type="tel" name="user-telephone" class="input-modal" />
+ <svg class="icon-label" width="18" height="18">
          <use href="./images/icons.svg#icon-phone-black-18dp-1"></use> 
         </svg>
-    <input type="tel" name="user-telephone" class="input-modal" />
-  </div>
-  </label>
- <div class="form-box">
+        </label>
   <label class="label-modal">
     <span class="label-span">Почта</span>
-    <svg class="icon-label" width="18" height="18">
+    <input type="email" name="user-email" class="input-modal" />
+  <svg class="icon-label" width="18" height="18">
          <use href="./images/icons.svg#icon-email-black-18dp-1"></use> 
         </svg>
-    <input type="email" name="user-email" class="input-modal" />
-  </div>
   </label>
   <label class="label-modal">
      <span class="label-span">Комментарий</span>
@@ -454,9 +449,7 @@
       <span class="span-icon"></span>
     Соглашаюсь с рассылкой и принимаю <a href="" class="conditions-link"> Условия договора</a>
   </label>
-  <div class="hero-box-button">
   <button type="submit" class="button-hero">Отправить</button>
-  </div>
       </form>
       </div>
     </div>
